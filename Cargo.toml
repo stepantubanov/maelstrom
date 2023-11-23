@@ -1,0 +1,19 @@
+[workspace.lints.clippy]
+enum_variant_names = "allow"
+
+[workspace]
+members = [
+  "base",
+  "echo",
+  "broadcast",
+  "crdt",
+  "datomic",
+]
+resolver = "2"
+
+[workspace.dependencies]
+anyhow = "1" 
+log = "0.4"
+futures = "0.3"
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt", "sync", "time"] }
